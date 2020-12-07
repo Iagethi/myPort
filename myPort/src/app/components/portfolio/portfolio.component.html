@@ -1,0 +1,30 @@
+<mat-card class="filter-card">
+  <mat-card-header>
+    <mat-card-title>
+      <h1>Portfolio</h1>
+    </mat-card-title>
+  </mat-card-header>
+</mat-card>
+
+<div @list class="row mb-5" *ngIf="portfolios">
+  <div @items class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3" *ngFor="let item of portfolios">
+    <mat-card >
+      <img mat-card-image [src]="item.preview" [alt]="item.name">
+      <mat-card-header>
+        <mat-card-title>{{ item.name }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        {{ item.description }}
+        <div id="langage-list">
+          <mat-chip-list>
+            <mat-chip *ngFor="let langage of item.langage" color="primary" selected>{{ langage }}</mat-chip>
+          </mat-chip-list>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Voir plus</button>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+</div>

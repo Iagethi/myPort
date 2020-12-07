@@ -1,0 +1,33 @@
+<div class="row">
+  <mat-card class="col-12">
+    <h4>Contactez-moi</h4>
+  </mat-card>
+</div>
+<mat-divider class="my-3"></mat-divider>
+<div class="row mb-5">
+  <div class="col-12 col-md-4">
+    <address>
+      <p><strong>Luca Omotobora</strong></p>
+      <p>Paris</p>
+      <p>France</p>
+    </address>
+    <address>
+      <p><strong>Email</strong></p>
+      <a class="accent-color" href="mailto:lucaombora@gmail.com">lucaombora@gmail.com</a>
+    </address>
+  </div>
+  <div class="col-12 col-md-8">
+    <form ngNoForm action="https://formspree.io/f/mjvpejpk" method="post">
+      <mat-form-field class="full-width mb-2">
+        <input matInput type="email" placeholder="Votre Email" name="_replyto" required>
+      </mat-form-field>
+      <mat-form-field class="full-width mb-2">
+        <input matInput type="text" placeholder="Sujet" name="subject" required>
+      </mat-form-field>
+      <mat-form-field class="full-width mb-2">
+        <textarea matInput placeholder="Message" name="message" required class="full-width"></textarea>
+      </mat-form-field>
+      <button mat-stroked-button type="submit">Envoyer</button>
+    </form>
+  </div>
+</div>
